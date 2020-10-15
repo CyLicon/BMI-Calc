@@ -10,6 +10,8 @@ int main()
 
     while (cnt == 1) {
 
+        std::cout << "Welcome to the BMI-Calc by Cylicon.\n";
+
         // Ask user for their height
 
         std::cout << "Type in your height (m): ";
@@ -39,7 +41,7 @@ int main()
         std::cin >> cnt;
 
         if (cnt == 0) {
-            std::cout << "Thanks for using calc!\n";
+            std::cout << "Thanks for using BMI-calc!\n";
             void exit();
             system("pause");
         }
