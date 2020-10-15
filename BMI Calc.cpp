@@ -2,39 +2,49 @@
 //
 
 #include <iostream>
-
+#include <stdlib.h>
 int main()
 {
+    int cnt = 1;
     double height, weight, bmi;
 
-    // Ask user for their height
+    while (cnt == 1) {
 
-    std::cout << "Type in your height (m): ";
-    std::cin >> height;
+        // Ask user for their height
 
-    // Now ask the user for their weight and calculate BMI
+        std::cout << "Type in your height (m): ";
+        std::cin >> height;
 
-    std::cout << "Type in your weight (kg): ";
-    std::cin >> weight;
+        // Now ask the user for their weight and calculate BMI
 
-    bmi = weight / (height * height);
+        std::cout << "Type in your weight (kg): ";
+        std::cin >> weight;
 
-    std::cout << "Your BMI is:  " << bmi << "\n";
+        bmi = weight / (height * height);
 
-    if (bmi < 18.5) {
-        std::cout << "Come on! Eat a little!\n";
+        std::cout << "Your BMI is:  " << bmi << "\n";
+
+        if (bmi < 18.5) {
+            std::cout << "Come on! Eat a little!\n";
+        }
+        else if (bmi > 24.9) {
+            std::cout << "Too lazy to excercise huh!\n";
+        }
+        else {
+            std::cout << "You are perfectly fine!\n";
+        }
+
+    std::cout << "Do you wish to continue?\n";
+    std::cout << "Press 0 to exit or 1 to continue: ";
+    std::cin >> cnt;
+
+    if (cnt == 0) {
+        std::cout << "Thanks for using calc!\n";
+        void exit();
+        system("pause");
+        }
     }
-    else if (bmi > 24.9) {
-        std::cout << "Too lazy to excercise huh!\n";
-    }
-    else {
-        std::cout << "You are perfectly fine!\n";
-    }
-
-
-    return 0;
 }
-
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
